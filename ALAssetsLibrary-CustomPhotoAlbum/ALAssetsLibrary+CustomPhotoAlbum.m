@@ -44,6 +44,35 @@
                      }];
 }
 
+
+- (void)writeImageDataToSavedPhotosAlbumVural:(NSData *)imageData
+                                     metadata:(NSDictionary *)metadata
+                                      toAlbum:(NSString *)albumName
+                              completionBlock:(ALAssetsLibraryWriteImageCompletionBlock)completionBlock
+                                 failureBlock:(ALAssetsLibraryAccessFailureBlock)failureBlock{
+    // write the image data to the assets library (camera roll)
+    [self  writeImageDataToSavedPhotosAlbum:imageData
+                                   metadata:metadata
+                            completionBlock:^(NSURL *assetURL, NSError *error) {
+                                // run the completion block for writing image to saved
+                                //   photos album
+                                completionBlock(assetURL, error);
+                                
+                                
+                                if (error) {
+                                    NSLog(@"Error Saving Photo Album!");
+                                } else
+                                {
+                                    // add the asset to the custom photo album
+                                    [self _addAssetURL:assetURL
+                                               toAlbum:albumName
+                                          failureBlock:failureBlock];
+                                }
+                            }];
+    
+    
+}
+
 - (void)saveVideo:(NSURL *)videoUrl
           toAlbum:(NSString *)albumName
   completionBlock:(ALAssetsLibraryWriteImageCompletionBlock)completionBlock
@@ -65,6 +94,11 @@
                                       toAlbum:albumName
                                  failureBlock:failureBlock];
                        }];
+    
+     
+    
+    
+    
 }
 
 #pragma mark - Private Method

@@ -389,11 +389,13 @@
 		7F83D8FD169A96D60091329A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vural Tuna (9P842XWA8D)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ALAssetsLibraryCustomPhotoAlbum_BasicDemo/ALAssetsLibraryCustomPhotoAlbum_BasicDemo-Prefix.pch";
 				INFOPLIST_FILE = "ALAssetsLibraryCustomPhotoAlbum_BasicDemo/ALAssetsLibraryCustomPhotoAlbum_BasicDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5B2BD3AF-80F6-4487-9650-DED0BDDCCCC8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -401,11 +403,13 @@
 		7F83D8FE169A96D60091329A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vural Tuna (9P842XWA8D)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ALAssetsLibraryCustomPhotoAlbum_BasicDemo/ALAssetsLibraryCustomPhotoAlbum_BasicDemo-Prefix.pch";
 				INFOPLIST_FILE = "ALAssetsLibraryCustomPhotoAlbum_BasicDemo/ALAssetsLibraryCustomPhotoAlbum_BasicDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5B2BD3AF-80F6-4487-9650-DED0BDDCCCC8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
